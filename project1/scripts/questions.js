@@ -1,7 +1,7 @@
 const questions = [
   {
     question: "Hvilket land har den største skovrydning i 2010 frem til 2020?",
-    apiEndpoint: "https://maltesmoegungerne.onrender.com/smallchanges",
+    apiEndpoint: "https://Maltesmoegunger1semester.onrender.com/smallchanges",
     yAxis: "netChanges",
     xAxis: "name",
     graphType: "bart",
