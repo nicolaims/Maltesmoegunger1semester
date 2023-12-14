@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <title>Resultatsiden</title>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="result-container">
+      <h1>Resultat på quizzen</h1>
+      <h2>Rigtige svar: <span id="correct-answers-count"></span></h2>
+      <img src="./css/images/5yE.gif" />
+      <div class="controls">
+        <button id="back-to-index-btn" class="back-to-index-btn btn">
+          Tilbage til forsiden<img src="./css/icons/return.png" alt="back" />
+        </button>
+      </div>
+    <script>
+      // Retrieve and display correct answers count
+      const correctAnswersCountElement = document.getElementById(
+        "correct-answers-count"
+      );
+      const storedCorrectAnswersCount = localStorage.getItem(
+        "correctAnswersCount"
+      );
+
+      if (storedCorrectAnswersCount !== null) {
+        correctAnswersCountElement.innerText = storedCorrectAnswersCount;
+      } else {
+        correctAnswersCountElement.innerText = "N/A";
+      }
+
+      // Add event listener to the button for redirection
+      const backButton = document.getElementById("back-to-index-btn");
+      backButton.addEventListener("click", function () {
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maltesmøgunger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="https://unpkg.com/geojson@0.5.0"></script>
+    <script type="module" src="./scripts/graphs/mapchart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="map-container"></div>
+
+      <div class="info-container">
+  <div class="additional-info-box">
+    <h2>Interaktivt verdenskort</h2>
+    <p>
+Dette interaktive kort viser med enkelhed, hvor meget skov der er blevet fældet i forskellige lande mellem 2010 og 2020. Det hjælper os med at sammenligne, hvilke lande der har oplevet mest skovtab, og fremhæver de steder, hvor indsatsen for at bevare skovene har gjort en forskel. Med dette kort kan vi få et øjebliksbillede af skovens tilstand rundt om i verden, og det understreger vigtigheden af at arbejde sammen om at tage vare på vores planet.    </p>
+<img src="css/icons/curved-arrow.png" width="50" height="50" class="left-corner-icon">
+
+</div>
+
+  <div class="quiz-box">
+    <h2>Afskovningsquizzen</h2>
+    <p>
+      Deltag i vores informative afskovningsquiz og få indsigt i de
+      komplekse udfordringer, årsager og virkninger af afskovning. Vi
+      stiller spørgsmål, der dækker forskellige aspekter af denne globale
+      udfordring og håber at øge din bevidsthed om betydningen af
+      bæredygtig skovforvaltning. Tryk på 'Læs mere' for at begynde din
+      rejse mod at forstå og bidrage til bevarelsen af vores verdens
+      skove.
+    </p>
+    <button class="start-btn btn" onclick="startQuiz()">
+      Læs mere...
+    </button>
+  </div>
+</div>
+
+
+    <script>
+      function startQuiz() {
+        window.location.href = "quiz.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Skovrydningsquizzen</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="https://unpkg.com/geojson@0.5.0"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+      <div id="intro-container"></div>
+      <div class="quiz-info-box"> <img
+          src="./css/images/quiz.png"
+          alt="Descriptive text about the image"
+          class="intro-image"/>
+                   <p>
+            Tag et dyk ind i vores afskovningsquiz, hvor vi sætter fokus på de mange aspekter af afskovning rundt om i verden. 
+            Denne quiz er designet til at være letforståelig og fyldt med vigtige oplysninger, som giver dig et overblik over de forskellige årsager 
+            og konsekvenser af afskovning. Med en række tankevækkende og indsigtsfulde spørgsmål er quizzen både underholdende og uddannende, perfekt for dem,
+            der ønsker at lære mere om dette kritiske miljøproblem. Så er du klar til at udforske og forstå den globale udfordring afskovning udgør? Tryk på 
+            'Start Quiz' og begynd din rejse nu!
+          </p>  
+          <div class="controls">
+          <button id="start-btn" class="start-btn btn">Start Quiz<img src="css/icons/ideas.png" alt="Start"></button>
+          </div>
+      </div>     
+
+      </div>
+        <div id="question-container" class="hide">
+          <div id="question">Spørgsmål</div>
+          <div id="explanation"></div>
+          <div id="answer-buttons" class="btn-grid">
+            <button class="btn">Svarmulighed 1</button>
+            <button class="btn">Svarmulighed 2</button>
+            <button class="btn">Svarmulighed 3</button>
+         </div>
+
+        </div>
+        <div id="explanation-container" class="hide"></div>
+        <div id="chart-container"></div>
+      </div>
+      <div class="controls">
+        <button id="next-btn" class="next-btn btn hide">Næste spørgsmål<img src="./css/icons/next (1).png" alt="next"></button>
+        <button id="results-btn" class="results-btn btn hide">Se resultat<img src="./css/icons/result.png" alt="result"></button>
+      </div>
+    </div>
+
+    <script src="scripts/graph.js"></script>
+    <script src="scripts/questions.js"></script>
+    <script src="scripts/graphs/barchart.js"></script>
+    <script src="scripts/graphs/linechart.js"></script>
+    <script src="scripts/graphs/mapchart.js"></script>
+    <script src="scripts/graphs/stackedchart.js"></script>
+    <script src="scripts/graphs/bartchart.js"></script>
+    <script src="scripts/graphs/barzchart.js"></script>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
