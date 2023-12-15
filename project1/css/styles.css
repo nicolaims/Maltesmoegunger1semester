@@ -7,6 +7,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+@media only screen and (max-width: 1980px) {
+  /* Styles for 1920px width screens */
+}
+
 .tooltip {
   position: absolute;
   text-align: center;
