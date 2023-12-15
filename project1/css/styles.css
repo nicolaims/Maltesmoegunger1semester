@@ -1,14 +1,10 @@
 :root {
-  --color-primary: #4caf50; /* Bright Green */
-  --color-secondary: #8bc34a; /* Lighter Green */
-  --color-accent: #2196f3; /* Accent Blue */
-  --color-background: #f5f5f5; /* Light Gray Background */
-  --color-text: #333; /* Dark Gray Text */
+  --color-primary: #4caf50;
+  --color-secondary: #8bc34a;
+  --color-accent: #2196f3;
+  --color-background: #f5f5f5;
+  --color-text: #333;
   font-family: "Poppins", sans-serif;
-}
-
-@media only screen and (max-width: 1980px) {
-  /* Styles for 1920px width screens */
 }
 
 .tooltip {
@@ -39,18 +35,17 @@ body {
 
 html,
 body {
-  height: 100vh; /* Set the height to the full viewport height */
+  height: 100vh;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevent scrolling on the entire page */
+  overflow: hidden;
 }
 
 .container {
   display: flex;
   flex-direction: row;
-  max-height: 100vh; /* Ensure the container does not exceed the viewport height */
-  overflow: hidden; /* Hide overflow to prevent scrolling */
-  /* Remove or adjust padding and margin as necessary */
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 .result-container {
@@ -62,21 +57,18 @@ body {
 }
 
 .result-container h1 {
-  /* Add any styles you need for h1 */
-  margin-bottom: 10px; /* Adjust as needed for spacing between h1 and h2 */
+  margin-bottom: 10px;
 }
 
 .result-container h2 {
-  /* Add any styles you need for h2 */
-  margin-top: 10px; /* Adjust as needed for spacing between h1 and h2 */
+  margin-top: 10px;
 }
 
 .result-container img {
-  /* Adjust the width and height properties to make the image bigger */
-  width: 800px; /* Set the desired width */
-  height: 700px; /* Set the desired height */
+  width: 800px;
+  height: 700px;
   border-radius: 400px;
-  object-fit: cover; /* Adjust the object-fit property if needed */
+  object-fit: cover;
 }
 
 .map-container {
@@ -95,42 +87,39 @@ body {
 
 #question-container {
   display: grid;
-  place-items: center; /* This shorthand property centers both horizontally and vertically */
+  place-items: center;
   border-radius: 10px;
-  width: 100%; /* Use 100% width for responsiveness */
+  width: 100%;
   height: 200px;
   margin: 50px;
   margin-bottom: 0;
 }
 .map-container {
   flex: 0.7;
-  /* overflow: hidden; */
   display: flex;
   justify-content: right;
   padding-left: 100px;
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: rgba(224, 224, 224, 0); /* Juster gennemsigtigheden her */
-  position: relative; /* Tilføjet: Position relative for at gøre det lettere at positionere map-header */
+  background-color: rgba(224, 224, 224, 0);
+  position: relative;
 }
 
 .country {
-  fill: #81c784; /* Light Green */
+  fill: #81c784;
   stroke: transparent;
   stroke-width: 1;
   cursor: pointer;
 }
 
 .country:hover {
-  fill: #66bb6a; /* Darker Green on hover */
+  fill: #66bb6a;
 }
-
-/* quiz.css */
 
 .controls {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers children horizontally in a column flex container */
+  align-items: center;
   justify-content: center;
   margin: 30px;
   font-size: 2rem;
@@ -138,11 +127,11 @@ body {
 .intro-container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically center children */
-  align-items: center; /* Horizontally center children */
-  width: 50%; /* Adjust the width as needed */
+  justify-content: center;
+  align-items: center;
+  width: 50%;
   max-height: 100%;
-  margin: 0 auto; /* This centers the container horizontally */
+  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -151,20 +140,20 @@ body {
   text-align: center;
   justify-content: center;
   padding: 20px;
-  margin: 20px auto; /* Center horizontally */
+  margin: 20px auto;
   font-size: 1.5rem;
   border-radius: 20px;
   height: 45%;
   width: 65%;
-  background-color: rgba(35, 68, 22, 0.4); /* Adjusted for transparency */
+  background-color: rgba(35, 68, 22, 0.4);
 }
 
 .intro-image {
   display: flex;
-  justify-content: center; /* Horizontally center the content (including image) */
-  align-items: center; /* Vertically center the content (including image) */
-  width: 100%; /* Adjust the width as needed */
-  height: 100vh; /* Adjust the height as needed */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
   border-radius: 50px;
 }
@@ -175,14 +164,14 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: rgba(35, 68, 22, 0.4); /* Adjusted for transparency */
+  background-color: rgba(35, 68, 22, 0.4);
   padding: 20px;
   margin: auto;
   font-size: 1rem;
   border-radius: 20px;
-  height: 85vh; /* Height set as a percentage of viewport height */
-  width: 50vw; /* Width set as a percentage of viewport width */
-  position: absolute; /* For absolute centering */
+  height: 85vh;
+  width: 50vw;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -234,13 +223,12 @@ button:hover {
 }
 
 #answer-buttons button {
-  flex: 0 0 auto; /* Prevents buttons from growing or shrinking */
-  width: 100%; /* Adjust the width as needed */
-  margin: 5px 10px; /* Adds vertical spacing between buttons */
-  padding: 20px 50px; /* Increases padding to make buttons larger */
-  font-size: 1rem; /* Increases the font size */
-  /* Additional styling for aesthetics */
-  border: 5px solid #ccc; /* Example border */
+  flex: 0 0 auto;
+  width: 100%;
+  margin: 5px 10px;
+  padding: 20px 50px;
+  font-size: 1rem;
+  border: 5px solid #ccc;
   border-color: #333;
 }
 
@@ -249,46 +237,46 @@ button:hover {
 }
 
 #start-btn img {
-  height: 50px; /* Adjust the size as needed */
+  height: 50px;
   width: 50px;
-  margin-left: 20px; /* Adds space between the icon and the text */
+  margin-left: 20px;
   vertical-align: middle;
 }
 
 .question-image {
-  max-width: 100%; /* Ensures the image is not wider than its container */
-  height: 50vh; /* Maintains the aspect ratio of the image */
-  display: block; /* Avoid inline behavior */
-  border-radius: 50px; /* Optional: Rounds the corners of the image */
+  max-width: 100%;
+  height: 50vh;
+  display: block;
+  border-radius: 50px;
   border: 5px solid#333;
   margin-bottom: 30px;
 }
 
 #next-btn img {
-  height: 50px; /* Adjust the size as needed */
+  height: 50px;
   width: 50px;
-  margin-left: 20px; /* Adds space between the icon and the text */
+  margin-left: 20px;
   vertical-align: middle;
 }
 
 #back-to-index-btn img {
-  height: 50px; /* Adjust the size as needed */
+  height: 50px;
   width: 50px;
-  margin-left: 20px; /* Adds space between the icon and the text */
+  margin-left: 20px;
   vertical-align: middle;
 }
 
 #results-btn img {
-  height: 50px; /* Adjust the size as needed */
+  height: 50px;
   width: 50px;
-  margin-left: 20px; /* Adds space between the icon and the text */
+  margin-left: 20px;
   vertical-align: middle;
 }
 
 #start-btn img {
-  height: 50px; /* Adjust the size as needed */
+  height: 50px;
   width: 50px;
-  margin-left: 20px; /* Adds space between the icon and the text */
+  margin-left: 20px;
   vertical-align: middle;
 }
 
@@ -296,19 +284,18 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh; /* Adjust this to your needs */
+  height: 50vh;
 }
 
 .parent-container {
-  /* The parent element of #chart-container */
   display: flex;
-  justify-content: center; /* Centers horizontally in the flex container */
-  align-items: center; /* Centers vertically in the flex container */
-  height: 100%; /* Make sure the parent has a height for vertical centering to work */
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .explanation-icon {
-  width: 50px; /* or any other size */
+  width: 50px;
   height: 50px;
   margin-right: 10px;
   vertical-align: middle;
@@ -319,18 +306,16 @@ button:hover {
   visibility: hidden;
 }
 
-/* Style for h1 */
 .result-container h1 {
-  font-size: 2.5rem; /* Increase the font size */
-  color: var(--color-primary); /* Set the text color to your desired color */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
-  margin-bottom: 20px; /* Adjust spacing as needed */
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 
-/* Style for h2 */
 .result-container h2 {
-  font-size: 1.5rem; /* Increase the font size */
-  color: var(--color-secondary); /* Set the text color to your desired color */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Add a subtle text shadow */
-  margin-top: 10px; /* Adjust spacing as needed */
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
 }
