@@ -1,22 +1,17 @@
-// Importér Express modulet og opret en Express-applikation
 const express = require("express");
 const app = express();
 const port = 8080;
-
-// Importér PostgreSQL klientmodulet
 const { Client } = require("pg");
-
-// Importér CORS (Cross-Origin Resource Sharing) modulet
 const cors = require("cors");
-
-// Tillad klientside-anmodninger fra alle kilder (Kun til demonstration. Brug specifikke regler i produktion.)
 app.use(cors());
 
-// Konfigurer PostgreSQL klienten med databasedetaljer
+// Tillad alle klientside-anmodninger (Dette er for demonstration. Brug mere specifikke regler i produktion.)
+app.use(cors());
+
 const klient = new Client({
   user: "thsvrkvn",
   host: "ella.db.elephantsql.com",
-  database: "thsvrkvn", // Bemærk: Brugernavn og database er det samme på ElephantSQL, da vi er på en delt instans
+  database: "thsvrkvn", //læg mærke til at user og database er det samme på elephant, da vi er på en shared instance
   password: "48EwLxMNlE3EY4oEKwOOk5Zx-EBMXvC3",
   port: 5432,
   ssl: {
@@ -24,10 +19,6 @@ const klient = new Client({
   },
 });
 
-// Opret forbindelse til databasen
-klient.connect();
-
-// Definer en route-handler til at håndtere GET-anmodninger på '/changes'
 klient.connect();
 app.get("/changes", async (req, res) => {
   try {
@@ -131,6 +122,20 @@ app.listen(port, () => {
   app.get("/totalannual", async (req, res) => {
     try {
       let queryData = await klient.query("SELECT * FROM totalannual");
+      res.json({
+        ok: true,
+        skovData: queryData.rows,
+      });
+    } catch (error) {
+      res.json({
+        ok: false,
+        message: error.message,
+      });
+    }
+  });
+  app.get("/mathchanges", async (req, res) => {
+    try {
+      let queryData = await klient.query("SELECT * FROM mathchanges");
       res.json({
         ok: true,
         skovData: queryData.rows,
